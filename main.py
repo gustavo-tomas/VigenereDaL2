@@ -1,3 +1,6 @@
+import re
+import math
+from collections import Counter
 # Steps
 # -> Format/Validate input
 # -> Cypher/Decypher
@@ -8,9 +11,11 @@ def main():
   [message, key] = read_input()
   cryptogram = cypher(message, key)
   dec_message = decypher(cryptogram, key)
+  prob_length = guessKeyL(cryptogram)
 
   print("MESSAGE:\t", message, "- KEY:\t\t", key)
   print("CRYPTOGRAM:\t", cryptogram, "- DEC_MESSAGE:\t", dec_message)
+  print(prob_length)
 
   return
 
@@ -72,6 +77,34 @@ def decypher(cryptogram, key):
 # Return the value of each character (a - z = 0 - 25) in a string
 def value(text):
   return [ord(x) - 97 for x in text]
+
+def divisors(n):
+    divs = []
+    for i in range(2,int(math.sqrt(n))+1):
+        if n%i == 0:
+            divs.extend([i,int(n/i)])
+    divs.extend([n])
+    return list(set(divs))
+
+def guessKeyL(stringu):
+    possi = []
+    temp = []
+    keylenghtpos = []
+    tam = 3
+    for tam in range(3,10):
+        for i in range(len(stringu)-(tam-1)):
+            seq = stringu[i:i+tam] 
+            indexes = [w.start() for w in re.finditer(seq, stringu[i:])]
+            if(len(indexes)>1):
+                possi.append(indexes[-1]-indexes[-2])
+
+
+    for distance in Counter(possi):
+        for num in divisors(distance):
+            temp.append(num)
+
+
+    return(sorted(Counter(temp), key=lambda i: -Counter(temp)[i]))
 
 if __name__ == "__main__":
   main()
