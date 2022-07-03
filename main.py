@@ -1,1 +1,77 @@
-print("Hello, Vigenere!")
+# Steps
+# -> Format/Validate input
+# -> Cypher/Decypher
+# -> Key recovery
+
+def main():
+
+  [message, key] = read_input()
+  cryptogram = cypher(message, key)
+  dec_message = decypher(cryptogram, key)
+
+  print("MESSAGE:\t", message, "- KEY:\t\t", key)
+  print("CRYPTOGRAM:\t", cryptogram, "- DEC_MESSAGE:\t", dec_message)
+
+  return
+
+# Read input: message, key
+def read_input():
+  
+  # Format input to lowercase
+  message = input().lower()
+  key = input().lower()
+
+  # Removes any character that isnt a-z and spaces
+  for m in value(message):
+    if (m < 0 or m > 25) and chr(m + 97) != " ":
+      message = message.replace(chr(m + 97), "")
+  
+  for k in value(key):
+    if (k < 0 or k > 25) and chr(k + 97) != " ":
+      key = key.replace(chr(k + 97), "")
+
+  # Invalid message or key
+  if len(message) <= 0 or len(key) <= 0:
+    print("Invalid Message or Key")
+    exit(0)
+
+  # Checks the length of the key
+  dif = len(message) - len(key)
+
+  # Key needs padding
+  if dif > 0:
+    for i in range(dif):
+      key += key[i % len(key)]
+
+  # Key needs trimming
+  if dif < 0:
+    key = key[:dif]
+
+  return message, key
+
+# Cypher: Ci = (Mi + Ki) mod 26 (+ 97 for Unicode characters)
+def cypher(message, key):
+  result = ""
+  for m, k in zip(value(message), value(key)):
+    if m >= 0 and m <= 25: # Ignores spaces
+      result += chr((m + k) % 26 + 97)
+    else:
+      result += chr(m + 97)
+  return result
+
+# Decypher: Mi = (Ci - Ki) mod 26 (+ 97 for Unicode characters)
+def decypher(cryptogram, key):
+  result = ""
+  for c, k in zip(value(cryptogram), value(key)):
+    if c >= 0 and c <= 25: # Ignores spaces
+      result += chr((c - k) % 26 + 97)
+    else:
+      result += chr(c + 97)
+  return result
+
+# Return the value of each character (a - z = 0 - 25) in a string
+def value(text):
+  return [ord(x) - 97 for x in text]
+
+if __name__ == "__main__":
+  main()
