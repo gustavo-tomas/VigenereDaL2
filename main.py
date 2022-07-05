@@ -108,51 +108,50 @@ def value(text):
 
 
 ########################
-#   guess key lenght   #
-#######################
+#   Guess key length   #
+########################
 
 def divisors(n):
-    divs = []
-    for i in range(2,int(math.sqrt(n))+1):
-        if n%i == 0:
-            divs.extend([i,int(n/i)])
-    divs.extend([n])
-    return list(set(divs))
+  divs = []
+  for i in range(2, int(math.sqrt(n)) + 1):
+    if n % i == 0:
+      divs.extend([i, int(n / i)])
+  divs.extend([n])
+  return list(set(divs))
 
 def guessKeyL(stringu):
-    possi = []
-    temp = []
-    keylenghtpos = []
+  possi = []
+  temp = []
+  keylenghtpos = []
+  reps = set()
 
+  for tam in range(SUBS_MIN, SUBS_MAX):
+    for i in range(len(stringu) - (tam - 1)):
+      seq = stringu[i:i+tam] 
+      indexes = [w.start() for w in re.finditer(seq, stringu[i:])]
+      if(len(indexes)>1):
+        reps.add(indexes[-1] - indexes[-2])
+        #possi.append(indexes[-1]-indexes[-2])
 
-    reps = set()
-    for tam in range(SUBS_MIN,SUBS_MAX):
-        for i in range(len(stringu)-(tam-1)):
-            seq = stringu[i:i+tam] 
-            indexes = [w.start() for w in re.finditer(seq, stringu[i:])]
-            if(len(indexes)>1):
-                reps.add(indexes[-1]-indexes[-2])
-                #possi.append(indexes[-1]-indexes[-2])
+  print("reps ",reps)
+  length = 0
+  teto = math.ceil(math.sqrt(max(reps)))
+  maiordiv = 0
+  maiorcount = 0
+  print("teto ",teto)
+  for divisor in range(2,teto+1):
+    count = 0
+    for distance in reps:
+      if(distance%divisor == 0):
+        count += 1
 
-    print("reps ",reps)
-    length = 0
-    teto = math.ceil(math.sqrt(max(reps)))
-    maiordiv = 0
-    maiorcount = 0
-    print("teto ",teto)
-    for divisor in range(2,teto+1):
-        count = 0
-        for distance in reps:
-            if(distance%divisor == 0):
-                count  += 1
-        maiorcount = max(count,maiorcount)
-        if(maiorcount == count):
-            maiordiv = divisor
-        
-    print("maiordiv= ",maiordiv)        
+    maiorcount = max(count, maiorcount)
+    if(maiorcount == count):
+      maiordiv = divisor
+      
+  print("maiordiv= ",maiordiv)        
 
-
-    return(maiordiv)
+  return(maiordiv)
 
 
 # escolher possivel tamanho da key
