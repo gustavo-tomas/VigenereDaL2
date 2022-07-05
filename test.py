@@ -1,37 +1,66 @@
-import re
-import math
-from collections import Counter
+
+from operator import imod
+
+
+import numpy as np
+
+EN_LETTER_FREQUENCIES = [8.167, 1.492, 2.782, 4.253, 12.702, 2.228, 2.015, 6.094, 6.996, 0.153,
+                             0.772, 4.025, 2.406, 6.749, 7.507, 1.929, 0.095, 5.987, 6.327, 9.056,
+                             2.758, 0.978, 2.360, 0.150, 1.974, 0.074]
+
+stringu = "almostbeforeweknewitwehadleftthegroundhoggreenarrowpathmontainskysnowstonerockmegamanwhite"
+stringu1 = "kpkywrlidyvcgiixiusxuolynpcpxrriebssxhfykebicxepbsuzerrqmxxysrqucqxsucxmxipygiwiekqyxafsxc"
+stringu2 = "abcdefghijklmnopqrstuvwxyzbcdefghijklmnopqrstuvwxyz"
+stringu3 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbcc"
+def value(text):
+  return [ord(x) - 97 for x in text]
+
+
+pos = 0
+guesslen = 3
+#local letter frequency
+LLF = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 	0, 	0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0] 
 
 
 
-stringu = "atkoicpjqssjaqmsohaqksihaqqithatpfbtticppurbrsphjbqskhapufbrothhvcpphesvjhuppfgpkriisgcsgcsgfsgiagidgjdgjdgiwfvwfcsecsecsecsecsecsecsecsetgtffhudgurryesyesudgudgudshwftsehwftsehsehwrgrtfftfrxgrxgrxhsbfgeufit"
-stringu1 = "WEXBINGWEXHUAAWEX"
+def test(s,pos):
+    looptot = round(len(s)/guesslen) #n sei se round sempre funciona
+    print(looptot)
+    for posl in range(pos, len(s), guesslen):
+        LLF[value(s[posl])[0]] += 100/looptot
 
 
 
-def divisors(n):
-    divs = []
-    for i in range(2,int(math.sqrt(n))+1):
-        if n%i == 0:
-            divs.extend([i,int(n/i)])
-    divs.extend([n])
-    return list(set(divs))
-
-possi = []
-temp = []
-keylenghtpos = []
-tam = 3
-for tam in range(3,10):
-    for i in range(len(stringu)-(tam-1)):
-        seq = stringu[i:i+tam] 
-        indexes = [w.start() for w in re.finditer(seq, stringu[i:])]
-        if(len(indexes)>1):
-            possi.append(indexes[-1]-indexes[-2])
+# for posl in range(len(stringu3)):
+#     #print(stringu2[posl][0])
+#     LLF[value(stringu3[posl])[0]] += 100/looptot
 
 
-for distance in Counter(possi):
-    for num in divisors(distance):
-        temp.append(num)
 
 
-print(sorted(Counter(temp), key=lambda i: -Counter(temp)[i]))
+
+
+
+
+key = []
+for keypos in range(guesslen):
+    diferenca = 1e9
+    letra = 0
+    test(stringu1,keypos)
+    for each in range(26): 
+
+        temp = np.roll(LLF,-each)
+        diferenca_local = sum(abs(np.subtract(EN_LETTER_FREQUENCIES,temp)))
+        print(chr(each + 97) , " - ", diferenca_local)
+        if(diferenca_local < diferenca):
+           
+            diferenca = diferenca_local
+            letra = each
+
+    key.append(letra)
+
+print("Key: ")
+for each in key:
+    print(chr(each+97),end = "")

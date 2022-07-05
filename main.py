@@ -1,3 +1,4 @@
+from cmath import sqrt
 import re
 import math
 from collections import Counter
@@ -28,7 +29,6 @@ def main():
   print("CRYPTOGRAM:\t", cryptogram, "- DEC_MESSAGE:\t", dec_message)
   print(prob_length)
 
-  print(sum(BR_LETTER_FREQUENCIES))
 
   return
 
@@ -125,21 +125,34 @@ def guessKeyL(stringu):
     keylenghtpos = []
 
 
-
+    reps = set()
     for tam in range(SUBS_MIN,SUBS_MAX):
         for i in range(len(stringu)-(tam-1)):
             seq = stringu[i:i+tam] 
             indexes = [w.start() for w in re.finditer(seq, stringu[i:])]
             if(len(indexes)>1):
-                possi.append(indexes[-1]-indexes[-2])
+                reps.add(indexes[-1]-indexes[-2])
+                #possi.append(indexes[-1]-indexes[-2])
+
+    print("reps ",reps)
+    length = 0
+    teto = math.ceil(math.sqrt(max(reps)))
+    maiordiv = 0
+    maiorcount = 0
+    print("teto ",teto)
+    for divisor in range(2,teto+1):
+        count = 0
+        for distance in reps:
+            if(distance%divisor == 0):
+                count  += 1
+        maiorcount = max(count,maiorcount)
+        if(maiorcount == count):
+            maiordiv = divisor
+        
+    print("maiordiv= ",maiordiv)        
 
 
-    for distance in Counter(possi):
-        for num in divisors(distance):
-            temp.append(num)
-
-
-    return(sorted(Counter(temp), key=lambda i: -Counter(temp)[i]))
+    return(maiordiv)
 
 
 # escolher possivel tamanho da key
