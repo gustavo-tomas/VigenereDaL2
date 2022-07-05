@@ -33,6 +33,9 @@ def main():
   return
 
 
+#############################
+#   Format/Validate input   #
+#############################
 
 # Read input: message, key
 def read_input():
@@ -70,6 +73,9 @@ def read_input():
   return message, key
 
 
+############
+#  Cypher  #
+############
 
 # Cypher: Ci = (Mi + Ki) mod 26 (+ 97 for Unicode characters)
 def cypher(message, key):
@@ -81,7 +87,9 @@ def cypher(message, key):
       result += chr(m + 97)
   return result
 
-
+##############
+#  Decypher  #
+##############
 
 # Decypher: Mi = (Ci - Ki) mod 26 (+ 97 for Unicode characters)
 def decypher(cryptogram, key):
@@ -96,6 +104,12 @@ def decypher(cryptogram, key):
 # Return the value of each character (a - z = 0 - 25) in a string
 def value(text):
   return [ord(x) - 97 for x in text]
+
+
+
+########################
+#   guess key lenght   #
+#######################
 
 def divisors(n):
     divs = []
@@ -126,6 +140,15 @@ def guessKeyL(stringu):
 
 
     return(sorted(Counter(temp), key=lambda i: -Counter(temp)[i]))
+
+
+# escolher possivel tamanho da key
+
+# loopar no Cryp de acordo com o tamanho da key e gerar frequencia das letras do cryp
+
+# para cada letra da possivel key, testar decrypitar com cada letra do alfabeto 
+# e checar qual chega mais perto de igualar frequencias
+
 
 if __name__ == "__main__":
   main()
