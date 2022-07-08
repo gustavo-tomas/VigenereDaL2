@@ -31,25 +31,25 @@ def guess_key_length(string):
       if(len(indexes) > 1):
         reps.add(indexes[-1] - indexes[-2])
 
-  print("reps =", reps)
   if len(reps) > 0:
     ceil = math.ceil(math.sqrt(max(reps)))
-    most_freq_div = 0
-    largest_count = 0
+    frequencies = {}
 
-    print("Ceil =", ceil)
     for div in range(2, ceil + 1):
       count = 0
       for distance in reps:
         if(distance % div == 0):
-          count += 1
+          if div in frequencies:
+            frequencies[div] += 1
+          else:
+            frequencies[div] = 0
 
-      largest_count = max(count, largest_count)
-      if(largest_count == count):
-        most_freq_div = div
+    sorted_freq = dict(sorted(frequencies.items(), key=lambda item: item[1], reverse=True))
+    most_frequent = list(sorted_freq.keys())
 
-    print("Most_freq_div =",most_freq_div)
-    return(most_freq_div)
+    print("Frequencies:", sorted_freq)
+    
+    return most_frequent[0] # @TODO: choose frequency
     
   return 0 # Deu ruim
 

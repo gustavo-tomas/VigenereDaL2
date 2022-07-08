@@ -10,15 +10,17 @@ def main():
 
   [message, key] = read_input()
 
-  enc_message = cypher(message, key)
-  dec_message = decypher(enc_message, key)
-  guess_key = key_decypher("input/cryptogram.txt", BR)
+  # enc_message = cypher(message, key)
+  # dec_message = decypher(enc_message, key)
+  guess_key = key_decypher("input/cryptogram.txt", EN)
+  rec_message = decypher(str(open("input/cryptogram.txt").read()).lower(), guess_key)
   
   # print("MESSAGE:\t", message)
   # print("KEY:\t\t", key)
   # print("CRYPTOGRAM:\t", enc_message)
   # print("DEC_MESSAGE:\t", dec_message)
   print("KEY GUESS:\t", guess_key)
+  print("REC MESSAGE:", rec_message)
 
   return
 

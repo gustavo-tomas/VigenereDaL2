@@ -21,7 +21,6 @@ def get_keystream(message, key):
         keystream += key[curr_idx]
         curr_idx = (curr_idx + 1) % len(key)
 
-  print("KEYSTREAM:\t", keystream)
   return keystream
 
 # Removes any non-alphabetic character from a string
