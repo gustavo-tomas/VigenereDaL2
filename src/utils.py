@@ -30,3 +30,7 @@ def format_string(string):
       string = string.replace(chr(s + 97), "")
   
   return string
+
+# Reads file and returns its content in <lowercase> string form
+def get_file_content(file):
+  return str(open(file).read()).lower()

@@ -3,39 +3,38 @@
 # -> Cypher/Decypher
 # -> Key recovery
 
+from utils import get_file_content
 from part1 import cypher, decypher
 from part2 import key_decypher, EN, BR
 
 def main():
 
-  [message, key] = read_input()
+  message = get_file_content("input/message.txt")
+  key = get_file_content("input/key.txt")
+  cryptogram = get_file_content("input/cryptogram.txt")
 
-  # enc_message = cypher(message, key)
-  # dec_message = decypher(enc_message, key)
-  guess_key = key_decypher("input/cryptogram.txt", EN)
-  rec_message = decypher(str(open("input/cryptogram.txt").read()).lower(), guess_key)
+  # Part 1
+  enc_message = cypher(message, key)
+  dec_message = decypher(enc_message, key)
   
-  # print("MESSAGE:\t", message)
-  # print("KEY:\t\t", key)
-  # print("CRYPTOGRAM:\t", enc_message)
-  # print("DEC_MESSAGE:\t", dec_message)
+  print("PART 1 ------------------------------------------------------------")
+  print("MESSAGE:\t\t", message)
+  print("KEY:\t\t\t", key)
+  print("CRYPTOGRAM:\t\t", enc_message)
+  print("DEC_MESSAGE:\t", dec_message)
+  print("\n")
+  
+  # Part 2
+  print("PART 2 ------------------------------------------------------------")
+  guess_key = key_decypher(cryptogram, EN)
+  rec_message = decypher(cryptogram, guess_key)
+  
+  print("CRYPTOGRAM:\t", cryptogram)
   print("KEY GUESS:\t", guess_key)
   print("REC MESSAGE:", rec_message)
+  print("\n")
 
   return
-
-#############################
-#   Format/Validate input   #
-#############################
-
-# Read input: message, key
-def read_input():
-  
-  # Format input to lowercase
-  message = str(open("input/message.txt").read()).lower()
-  key = str(open("input/key.txt").read()).lower()
-
-  return message, key
 
 if __name__ == "__main__":
   main()

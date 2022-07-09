@@ -1,56 +1,15 @@
-KEY GUESS:	 baabbbb
-REC MESSAGE: Noy thjr it a tunrz, zmn zbptt jow
-Ox ljef int gkirpee, susnfe tptheg-coxm
-Bod J'f kild tq tald a niovse
-Ltsv siu qihhu ugesd
-J'nl tfkl zov inw K aeeamf shf psjmcf ng c soxm ccllfc Cfk-Bkr
+PART 1 ------------------------------------------------------------
+MESSAGE:		 attack at dawn. what a nice man.
+KEY:			 lemon
+CRYPTOGRAM:		 lxfopv ef rnhr. ivne e zwpp qmb.
+DEC_MESSAGE:	 attack at dawn. what a nice man.
 
-Jo Wets Qiimbcemoikz, bpqn cnd szitee
-Qm tid pnayhqovne xzs xgftd J toeot nprt pe na cazr
-Diimmhn ptu, ozxjm', rglayhn', blm dnom
-Anf alm rhpoujm splf d-aamk owtsjce pf uid sdgpqk
-Xidn b cpvolf ng ityt, vhq wesd uq tp on gpne
-Utassee mblhn' uqpwalf hn oy nfhgibpsgopc
-J iot jm ooe mjstmd gkfhu znf my nnm hou tbasde
-Cnd tzie: Ypw'qe nnvkn wjsh zovs zuosjg zne tnele jm Cfk-Bkr!
 
-J cdghde cmd qkecdee viuh ifq dbx bhses caa
-Bvu rhf obejahdd oy svhtdatf zne rfps mf nn oy wbx
-Tid hcue nd a mist
-Ane sigm sid gcve nd mz tjdjeu
-I pwt mz vamknbm oo zof rajc: J nihis at vfnk kjbk kt!
+PART 2 ------------------------------------------------------------
+Frequencies: {2: 141, 4: 127, 8: 114, 16: 60, 3: 54, 6: 45, 5: 39, 12: 39, 24: 36, 32: 32, 10: 29, 20: 26, 7: 25, 40: 22, 9: 18, 14: 18, 18: 16, 11: 14, 28: 14, 13: 13, 36: 13, 26: 12, 15: 11, 22: 11, 17: 10, 19: 10, 34: 10, 44: 10, 23: 9, 30: 9, 25: 8, 38: 8, 46: 7, 27: 6, 31: 6, 33: 5, 35: 5, 41: 4, 29: 3, 37: 3, 45: 3, 21: 2, 39: 2, 43: 2, 42: 1}
+Most freq: [2, 4, 8, 16, 3, 6, 5, 12, 24, 32, 10, 20, 7, 40, 9, 14, 18, 11, 28, 13, 36, 26, 15, 22, 17, 19, 34, 44, 23, 30, 25, 38, 46, 27, 31, 33, 35, 41, 29, 37, 45, 21, 39, 43, 42]
+CRYPTOGRAM:	 tpsja kexis ttgztpb wq ssmil tfdxf vsetw ytafrttw btzf pcbroxdzo zn tqac wix, bwfd s, je ahvup sd pcbqqxff lfzed d avu ytwoxavneh sg p aznst qaghv. sfiseic f udh zgaurr dxnm rcdentv btzf nllgubsetz, wymh qfndbhqgotopl qq asmactq m prftlk huusieymi ythfdz: t tdxavict i cjs vu yts edi grzivupavnex yy pikoc wirjbko, xtw gb rvffgxa pikoc, iedp elex t gmbdr fzb sgiff bpkga; p gvgfghm t ele z xwogwko qbgmgwr adlmy bozs rtpmchv e xtme ccmo. xhmetg, hup meyqsd czgxaj o jul fsdis, eaz t tah bf iymvaxhf, mll ra roso: objqgsecl kepxqrl pgxdt sjtp emhgc v o axrfphvunh. huic zseh, ijewiet tw pjoj hzkee so kacwi pt ida dxbfp-tvict ha bsj dp tkahhf dp 1869, ge yxbya mxpm rvrclke pt qrtfffu. iwehl nre hsjspgxm t elaeks mccj, rtcse t diodiiddg, vrl lsxiszrz, isehiza nxvop rv tcxdqchfs nhrfdg v ffb eodagayaepd of cpfmftfzo ahv acnv axbkah. cezp tquvcj! vpkhmss v qfx rmd vfugx gmghrs yxq mciecthw. mrfvsnx ugt qyogbe — btbvictzm jar csnzucvr mtnhm, ifzsex i odbjtlgxq, iof czgwfpbke p mea ifzsex, ugt zvvzn yy sohupeie uwvid we gahzml asdp o znexvopzrr plxm tbxeyasep wuett ra swjcfkwa fiv pchjqgwl a mxmdp rv mtglm rcma: — “ghw, cjs f czglqrsjtpl, qqjg jeyasdtg, mod isptwj dtsid rcdirh ugt o eaenvqoo gacxgq tgkac vlagoedz t tqgrr ickibpfrvpe hq ja uod feuh pvlzl gmgottpkie fiv tpf lacfrdz t lgboeiothq. tgke lk wabpiiz, xwfpg xoetw pd qvu, ljyqaoj nfoizh sjcfkee fiv czuvqb c rzfe gabc lm nkibt tlnpkia, iiuo tlwa t o uoc vvgp s da bni xws iot t rmiiiekt ee bozs tgxuboj eymvmcvrs; enha xgjo p nq ejpcixx pajjfr lh rahgf iwnwfgs wiytha.” qcd e qbix pazgz! gea, cof mp tvdtdvnoh hmh jznex ebdzzcpl ugt zye oxmjtw. v fzb eehwd qfx gttulet t gxpijuwt hah avud wmmh; tfi llwub ele xx izrodiyaiu eoia z nrpxgtogxvqs qfuymvk ss yaxeif, hsd ad âgwupg eex tw pjjzdll ha bcto akmzrwge, xtw bpijaoh i fgcgerh gabc hupf wq gskict xmgrv dz xwbthrcfes. fpfue p tfagfvctws. hxfrmxx md jars yhzq di uek iiehcrs, pgxdt scad mvqh gvnshvmh, aznst mdbo jambrm, rojaot gab c toekmy, p tzlst, — yy awiiz ws hpzv, — e... exrtpa ganbizrwr! dljyu p dfunh pttg uicxm cjsd ect e ftftetke etbyoct. gachvnexq-et rv sluid fiv edle mcceixt, eucrr qfx rmd drrpgxm, eouenxy ypwj dz jyq pg gacxrfpg. v vpkhmss, gaoxgqj arid. gea swxo bni et qrrabwet, bro obka fiv sp wiumojsp ksxpf gewh gtpc, toyoyxho. eex h qqj csieh idp qfidt exiodeymi pgodaebgm... ja jowmiugof qfx ijewia lhw etgjeyme q firtch ezdg, eaz iedtqv qfx vqjbr ex lm fdrfs zl ixtavnehw pt ida ekestrza. p wepd ele dbq, a fiv mpgse rcevtglm p sjsl tracwda pke meoieyme-xd. rv pp, t gmqstetke pp qrml, vsy dg flshw qhhlptwse, p pfcl xrfgsrbpkxm, p hiidmi etbyoct qma dfdtt gdtf ea xbrtp sottggmd.
+KEY GUESS:	 temporal
+REC MESSAGE: algum tempo hesitei se devia abrir estas memorias pelo principio ou pelo fim, isto e, se poria em primeiro lugar o meu nascimento ou a minha morte. suposto o uso vulgar seja comecar pelo nascimento, duas consideracoes me levaram a adotar diferente metodo: a primeira e que eu nao sou propriamente um autor defunto, mas um defunto autor, para quem a campa foi outro berco; a segunda e que o escrito ficaria assim mais galante e mais novo. moises, que tambem contou a sua morte, nao a pos no introito, mas no cabo: diferenca radical entre este livro e o pentateuco. dito isto, expirei as duas horas da tarde de uma sexta-feira do mes de agosto de 1869, na minha bela chacara de catumbi. tinha uns sessenta e quatro anos, rijos e prosperos, era solteiro, possuia cerca de trezentos contos e fui acompanhado ao cemiterio por onze amigos. onze amigos! verdade e que nao houve cartas nem anuncios. acresce que chovia — peneirava uma chuvinha miuda, triste e constante, tao constante e tao triste, que levou um daqueles fieis da ultima hora a intercalar esta engenhosa ideia no discurso que proferiu a beira de minha cova: — “vos, que o conhecestes, meus senhores, vos podeis dizer comigo que a natureza parece estar chorando a perda irreparavel de um dos mais belos caracteres que tem honrado a humanidade. este ar sombrio, estas gotas do ceu, aquelas nuvens escuras que cobrem o azul como um crepe funereo, tudo isso e a dor crua e ma que lhe roi a natureza as mais intimas entranhas; tudo isso e um sublime louvor ao nosso ilustre finado.” bom e fiel amigo! nao, nao me arrependo das vinte apolices que lhe deixei. e foi assim que cheguei a clausula dos meus dias; foi assim que me encaminhei para o undiscovered country de hamlet, sem as ânsias nem as duvidas do moco principe, mas pausado e tropego como quem se retira tarde do espetaculo. tarde e aborrecido. viramme ir umas nove ou dez pessoas, entre elas tres senhoras, minha irma sabina, casada com o cotrim, a filha, — um lirio do vale, — e... tenham paciencia! daqui a pouco lhes direi quem era a terceira senhora. contentem-se de saber que essa anonima, ainda que nao parenta, padeceu mais do que as parentas. e verdade, padeceu mais. nao digo que se carpisse, nao digo que se deixasse rolar pelo chao, convulsa. nem o meu obito era coisa altamente dramatica... um solteirao que expira aos sessenta e quatro anos, nao parece que reuna em si todos os elementos de uma tragedia. e dado que sim, o que menos convinha a essa anonima era aparenta-lo. de pe, a cabeceira da cama, com os olhos estupidos, a boca entreaberta, a triste senhora mal podia crer na minha extincao.
 
-Gjqsu bmcrs
-An, tiit jr bbc
-Etinlhn prbofe ktjed ovs oh a cizmqahod gmztu
-Is ugit wibs tid qgnpmd ip Bfm-Ais kixin mhkf?
-Hno, shjr mkghu ae blsjfhu
 
-Buv wajs, J idbt shfx'rg prjrsz
-Bpwqgfniu, alm shbt
-Ju shjr tje tzoe pf qmzcf sics tidy uhovkd teoe shjr dqnl dzt?
-K dpo's tihom ro
-K'kl tef xgeo I ggt tidrf
-I iqoe ugea're qqeqasfc
-Gpq tje pshnde pg Bem-Ais
-
-Wfnk, ui
-Thf pmbme mzofdd bmd yheo I cblf qtt
-Vgese xbr a eteg, kopjef lild a doq
-Usaocip thfqe xiui ly ozng nuu
-I ajn'u uqyjm uq feu zrtesudd zeu
-K iuts gqt hfqe
-K rqtznh vivh tid qvidlmetr
-Mkke mhgitfohnh, cjuraqoecree
-
-I wihtvkee eot a cba aod xidn js dcle odat
-Tif kiddoud pmztg sajc: Gsdtj
-Ane gae a ejbe jm ujd mjqrqr
-Jg znzsikmg K bovle tzy ugbv shjr ccb wbr rbrf
-Dtt K shpuhis: Obg, fqrgfs iu, yp inmf, sp Del-Chr
-
-K ounlee tp uo b inutd bdnuu rexen pq ejgiu
-Ane I yflmfc tp sig bacaig 'yo inmf, snfkl zz mcses
-Lopkfe zt nx lkmgenm
-K wbt eiozmnx tidrg
-Tp tht pm na shsnng as uge qrjobe pe Cgl-Bjq

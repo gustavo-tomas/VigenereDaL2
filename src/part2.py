@@ -48,8 +48,9 @@ def guess_key_length(string):
     most_frequent = list(sorted_freq.keys())
 
     print("Frequencies:", sorted_freq)
+    print("Most freq:", most_frequent)
     
-    return most_frequent[0] # @TODO: choose frequency
+    return most_frequent[2] # @TODO: choose frequency
     
   return 0 # Deu ruim
 
@@ -67,8 +68,8 @@ def get_letter_freq(cryptogram, pos, guesslen):
 ##########################
 #  Decypher without key  #
 ##########################
-def key_decypher(file, lan):
-  cryptogram = format_string(str(open(file).read()))
+def key_decypher(cryptogram, lan):
+  cryptogram = format_string(cryptogram)
   keylen = guess_key_length(cryptogram)
   key = []
   
