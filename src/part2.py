@@ -46,11 +46,8 @@ def guess_key_length(string):
 
     sorted_freq = dict(sorted(frequencies.items(), key=lambda item: item[1], reverse=True))
     most_frequent = list(sorted_freq.keys())
-
-    print("Frequencies:", sorted_freq)
-    print("Most freq:", most_frequent)
     
-    return most_frequent[2] # @TODO: choose frequency
+    return most_frequent
     
   return 0 # Deu ruim
 
@@ -69,30 +66,46 @@ def get_letter_freq(cryptogram, pos, guesslen):
 #  Decypher without key  #
 ##########################
 def key_decypher(cryptogram, lan):
+
   cryptogram = format_string(cryptogram)
-  keylen = guess_key_length(cryptogram)
-  key = []
-  
-  for keypos in range(keylen):
-    smallest_diff = 1e9
-    letter = 0
-    LLF = get_letter_freq(cryptogram, keypos, keylen)
-
-    for each in range(26): 
-      temp = np.roll(LLF, -each)
-      if(lan == EN):
-        diff = sum(abs(np.subtract(EN_LETTER_FREQUENCIES, temp)))
-      else:
-        diff = sum(abs(np.subtract(BR_LETTER_FREQUENCIES, temp)))
-
-      if(diff < smallest_diff):
-        smallest_diff = diff
-        letter = each
-
-    key.append(letter)
-  
-  # Converts key to char
+  most_frequent = guess_key_length(cryptogram)
+  ok = 0
+  idx = 0
   chave = ""
-  for each in key:
-    chave += chr(each + 97)
+
+  print("\nMost freq:", most_frequent)
+
+  while ok == 0:
+    keylen = most_frequent[idx]
+    key = []
+    
+    for keypos in range(keylen):
+      smallest_diff = 1e9
+      letter = 0
+      LLF = get_letter_freq(cryptogram, keypos, keylen)
+
+      for each in range(26): 
+        temp = np.roll(LLF, -each)
+        if(lan == EN):
+          diff = sum(abs(np.subtract(EN_LETTER_FREQUENCIES, temp)))
+        else:
+          diff = sum(abs(np.subtract(BR_LETTER_FREQUENCIES, temp)))
+
+        if(diff < smallest_diff):
+          smallest_diff = diff
+          letter = each
+
+      key.append(letter)
+    
+    # Converts key to char
+    chave = ""
+    for each in key:
+      chave += chr(each + 97)
+
+    print("\nKEY:", chave, "- IDX:", idx)
+    ok = int(input("Is this key ok? (0 - No, 1 - Yes) -> "))
+
+    if ok == 0:
+      idx = int(input("Choose another index -> "))
+    
   return chave
