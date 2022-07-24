@@ -5,7 +5,7 @@
 
 from utils import get_file_content, set_file_content
 from part1 import cypher, decypher
-from part2 import key_decypher, EN, BR
+from part2 import key_decypher
 
 CYPHER = 0
 DECYPHER = 1
@@ -37,10 +37,10 @@ def main():
   
   elif action == KEY_RECOVERY:
     cryptogram_file = input("Choose a file with a cryptogram: ")
-
     cryptogram = get_file_content(cryptogram_file)
-
-    rec_key = key_decypher(cryptogram, EN)
+    language = int(input("Choose the cryptogram language (0 - BR | 1 - EN): "))
+ 
+    rec_key = key_decypher(cryptogram, language)
     rec_message = decypher(cryptogram, rec_key)
     set_file_content("output/" + cryptogram_file.split("/")[-1].strip(".txt") + "_recovered_key.txt", rec_key)
     set_file_content("output/" + cryptogram_file.split("/")[-1].strip(".txt") + "_recovered_message.txt", rec_message)
